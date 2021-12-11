@@ -166,3 +166,32 @@
 // 		console.log('end')
 // 	}
 // }
+
+// let a =1
+//
+// console.log(++a)
+
+// for(let a = 1 ; a<= 20 ; a++){
+// 	if(a % 2 == 0){
+// 		console.log(a)
+// 	}
+// }
+// for(let a = 1 ; a<= 20 ; a++){
+// 	if(a % 2 != 0){
+// 		console.log(a)
+// 	}
+// }
+
+// let a = 0
+// for(let i = 5; i<=50 ; i++  ){
+// 	a= a + i // a+=i
+// }
+// console.log(a)
+
+// let a = 0
+// for(let i = 5 ; i < 30 ; i++){
+// 	if( i%7 == 0){
+// 		a+=i
+// 	}
+// }
+// console.log(a)
