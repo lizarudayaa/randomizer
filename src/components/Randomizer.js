@@ -4,7 +4,8 @@ import Wizard from "./UI/Wizard/Wizard";
 import {makeStyles} from "@mui/styles";
 import Wand from "./UI/Wand/Wand";
 import Firework from './UI/Firework/Firework'
-
+import students from './../assets/data/students'
+import questions from './../assets/data/questions'
 const useStyles = makeStyles({
 	flexik:{
 		display:'flex',
@@ -18,7 +19,6 @@ const useStyles = makeStyles({
 	}
 })
 
-const questions = [1,2,3,4,5,6,7,8,9,10]
 
 const Randomizer = () => {
 	const classes = useStyles()
@@ -27,7 +27,7 @@ const Randomizer = () => {
 	const [loading , setLoading] = useState(false)
 	const [qloading , setQLoading] = useState(false)
 
-	const students = ['student1', 'student2', 'student3', 'student4','student5']
+
 
 
 	const selectStudent = () => {
@@ -72,6 +72,7 @@ const Randomizer = () => {
 							{loading && <Wand/>}
 							{student && !loading && questions.length > 0 ? <Typography
 								variant={'body'}
+								sx={{mt:'10px'}}
 
 							>{student}</Typography> : <Typography></Typography>}
 
@@ -94,6 +95,7 @@ const Randomizer = () => {
 						{qloading && <Wand/>}
 						{question && questions.length > 0  && !qloading ? <Typography
 							variant={'body'}
+							sx={{my:'15px'}}
 						>{question}
 						</Typography> : null}
 					</Grid>
@@ -101,7 +103,7 @@ const Randomizer = () => {
 						{questions.length !== 0  && <Button
 							variant={'outlined'}
 							onClick={selectQuestion}
-							disabled={questions.length === 0}
+							disabled={!student}
 						>Select Question</Button>}
 
 					</Grid>
